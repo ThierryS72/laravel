@@ -11,6 +11,23 @@
 |
 */
 
+Route::resource('tasks', 'TasksController');
+
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/task/{id?}', function ($id = null) {
+    return 'User '.$id;
+});
+
+Route::get('/test/{param}', function ($param) {
+    return view('test')->with('param', $param);
+});
+
+Route::get('/tasks', 'TasksController@index');
+*/
+//Route::get('tasks/{id?}', 'TasksController@show')->name('tasksShow');
+//route('task', ['id' => 1]);
